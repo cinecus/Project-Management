@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongodb = require('mongodb')
-var db = require('monk')('localhost:27017/ProjectDB')
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy
 var flash = require("express-flash")
+
+const db = require('../database/db')
 
 //upload
 var multer = require('multer')

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongodb = require('mongodb')
-var db = require('monk')('localhost:27017/ProjectDB')
+const db = require('../database/db')
 
 
 router.get('/', function(req, res, next) {
