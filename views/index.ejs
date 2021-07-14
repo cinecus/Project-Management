@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  
+</head>
+<body>
+  <%- include layout %>
+  <h1 align="center" class="my-4">My Civil Engineering Portfolio</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 my-4">
+        <div class="row">
+        <% if(projects.length >0){%>
+          <% projects.forEach(function(project){ %>
+              <div class="col-lg-4 col-md-6 mb-5">
+                <div class="card h-100">
+                  <a href="/details/<%=project._id%>"><img class="card-img-top" src="/images/<%= project.image %>" alt="" width="700px" height="400px"></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                         ชื่อ: <a href="/details/<%=project._id%>"><%= project.name %></a>
+                    </h5>
+                    <h6>วันเริ่มโปรเจค : <%= project.date %></h6>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                          <a href="/details/<%=project._id%>">See More</a>
+                    </small>
+                  </div>
+              </div>
+            </div>
+          <%})%>
+        <%}else{%>
+      </div>
+    </div>
+  </div>
+  <h2 align="center">ไม่มีข้อมูลโปรเจค</h2>
+<%}%>
+</div>
+  <footer class="py-5 bg-dark sticky-bot">
+    <div class="container">
+      <p class="m-0 text-center text-white">Project Management : <a href="/admin/login">Admin</a></p>
+    </div>
+  </footer>
+</body>
+</html>

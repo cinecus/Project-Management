@@ -1,0 +1,26 @@
+{
+  "name": "project-management",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-flash": "*",
+    "express-session": "^1.17.2",
+    "http-errors": "~1.6.3",
+    "mongodb": "*",
+    "monk": "*",
+    "morgan": "~1.9.1",
+    "multer": "*",
+    "nodemon": "^2.0.7",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}
